@@ -13,6 +13,21 @@ angular.module('mailBox', [ 'ngRoute', 'ngSanitize']).config(function ( $routePr
       controller: 'EmailCtrl',
       controllerAs: 'email'
     })
+    .when('/sent',{
+        timplateUrl : 'views/sent.html',
+        controller : 'SentCtrl',
+        controllerAs: 'sent'
+    })
+    .when('/starred',{
+        timplateUrl : 'views/starred.html',
+        controller : 'StarCtrl',
+        controllerAs: 'starred'
+    })
+    .when('/draft',{
+        timplateUrl : 'views/draft.html',
+        controller : 'DraftCtrl',
+        controllerAs: 'draft'
+    })
     .otherwise({
       redirectTo: '/inbox'
     });

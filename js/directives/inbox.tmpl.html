@@ -1,6 +1,6 @@
 <div class="inbox">
   <ul class="inbox__list">
-    <li ng-repeat="message in inbox.messages | filter:{ from: inbox.search }">
+    <li ng-repeat="message in inbox.messages ">
       <div class="inbox__list-info">
           <a href="" ng-click="inbox.goToMessage(message.id);">
         <span class="inbox__list-from">  {{ message.from }} </span>

@@ -19,10 +19,6 @@ angular.module('mailBox')
           InboxFactory.goToMessage(id);
         };
 
-        this.deleteMessage = function (id, index) {
-          InboxFactory.deleteMessage(id, index);
-        };
-
         InboxFactory.getMessages()
           .then( angular.bind( this, function then() {
               this.messages = InboxFactory.messages;
